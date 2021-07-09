@@ -20,7 +20,7 @@ export default function User ({item})
                     {
                         posts.map((value) =>
                         {
-                           return <div key={value.id}>{value.title}</div>
+                           return <div key={value.id}><i>{value.title}</i></div>
                         })
                     }
                 </Route>
