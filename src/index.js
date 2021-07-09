@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export let MyContext = createContext('');
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <MyContext.Provider value={'helo'}>
+          <App />
+      </MyContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
