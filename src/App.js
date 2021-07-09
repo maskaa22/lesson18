@@ -5,6 +5,8 @@ import {BrowserRouter as Router,
 } from "react-router-dom";
 import './App.css';
 import Users from "./components/users/Users";
+import Posts from "./components/posts/Posts";
+import Comments from "./components/comments/Comments";
 
 function App() {
   return (
@@ -12,13 +14,20 @@ function App() {
         <Router>
 
           <div>
-            <Link to={'/users'}>user page</Link>
+            <Link to={'/users'}>User page</Link>
+          </div>
+          <div>
+             <Link to={'/posts'}>Post page</Link>
+          </div>
+          <div>
+             <Link to={'/comments'}>Comment page</Link>
           </div>
           
           <Switch>
               <Route path={'/users'} component={Users}/>
+              <Route path={'/posts'} component={Posts}/>
+              <Route path={'/comments'} component={Comments}/>
           </Switch>
-          
         </Router>
     </div>
   );

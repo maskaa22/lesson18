@@ -2,8 +2,7 @@ import {useEffect, useState} from "react";
 import {getUsers} from "../servises/userServise";
 import User from "../user/User";
 import {Route, Switch} from "react-router-dom";
-//import UserDeteils from "../user-deteils/UserDeteils";
-import UserDeteils2 from "../userDeteils2/UserDeteils2";
+import UserDeteils from "../userDeteils/UserDeteils";
 
 export default function Users ()
 {
@@ -18,8 +17,7 @@ export default function Users ()
                 users.map(value => <User key={value.id} item={value}/>)
             }
             <Switch>
-                {/*<Route path={'/users/:id'} component={UserDeteils}/>*/}
-                <Route path={'/users/:id'} component={UserDeteils2}/>
+                <Route path={'/users/:id'} component={UserDeteils}/>
             </Switch>
         </div>
     );
