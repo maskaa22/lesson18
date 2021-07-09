@@ -13,10 +13,7 @@ export default function User ({item})
     return(
         <div>
             {item.name} -
-            <Link to={{
-                pathname: '/users/' + item.id + '/allposts',
-                //state: item
-        }}>Show posts</Link>
+            <Link to={'/users/' + item.id + '/allposts'}>Show posts</Link>
 
                 <Route path={'/users/' + item.id + '/allposts'}>
                     {getPosts()}
