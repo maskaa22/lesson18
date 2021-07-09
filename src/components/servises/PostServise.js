@@ -5,6 +5,6 @@ const axiosInstance = axios.create ({
     headers: {}
 });
 const getPosts = () => axiosInstance('');
-const getPost = (id) => axiosInstance('/' + id);
+const getPost = (id) => axiosInstance('/' + `?userId=${id}`);
 
 export {getPosts, getPost}
